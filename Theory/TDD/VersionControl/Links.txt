@@ -1,0 +1,4 @@
+Branchin Strategies:
+  https://www.agileconnection.com/article/picking-right-branch-merge-strategy
+  https://www.atlassian.com/agile/software-development/branching
+  https://rollout.io/blog/branching-strategy/
