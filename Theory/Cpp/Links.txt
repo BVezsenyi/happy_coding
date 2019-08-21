@@ -1,2 +1,0 @@
-C++ itself: 
-  http://www.cplusplus.com/files/tutorial.pdf
