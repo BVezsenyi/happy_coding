@@ -13,5 +13,5 @@ typedef enum blink_period{
   MS_1000
 }BLINK_PERIOD;
 
-
+//Test line.
 #endif /* _LED_HANDLER_H_ */
