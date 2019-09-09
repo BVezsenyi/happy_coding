@@ -1,13 +1,10 @@
 CC=gcc
 
-OBJ_DIR = ../OBJ/
-SRC_DIR = ./
-INCLUDE = ../HEADER/
-TARGET_DIR = ../TARGET/
+OBJ_DIR=OBJ
+SRC_DIR=SRC
+TARGET_DIR=./TARGET/
 
-GENERAL_OBJ_LIST = $(foreach var, $(GENERAL_SRC_LIST), $(OBJ_DIR)$(var:.c=.o))
-SOURCES = $(addprefix $(SRC_DIR), $(GENERAL_SRC_LIST) )
-OBJS = $(addprefix $(OBJ_DIR), $(GENERAL_OBJ_LIST) )
+GENERAL_OBJ_LIST = $(foreach var, $(GENERAL_SRC_LIST), $(subst $(SRC_DIR),$(OBJ_DIR),$(var:.c=.o) ) ) 
 EXE_FILE = $(TARGET_DIR)$(EXE_NAME)
 
 DIR_GUARD=@mkdir -p $(@D)
@@ -25,12 +22,12 @@ clean:
 
 .SECONDEXPANSION:
 
-$(EXE_FILE): $(OBJS)
+$(EXE_FILE): $(GENERAL_OBJ_LIST)
 	$(PRINTER)
 	$(DIR_GUARD)
 	$(CC) -g $^ -o $@
 
-$(OBJS): %.o: $$(subst $(OBJ_DIR),$(SRC_DIR),$$*).c
+$(GENERAL_OBJ_LIST): %.o: $$(subst $(OBJ_DIR),$(SRC_DIR),$$*).c
 	$(PRINTER)
 	$(DIR_GUARD)
-	$(CC) -I$(INCLUDE) -c $< -o $@
+	$(CC) $(INCLUDE) -c $< -o $@
