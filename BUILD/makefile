@@ -18,7 +18,7 @@ all: clean update
 update: $(EXE_FILE)	 
 
 clean: 
-	rm -rf	$(OBJ_DIR) $(TARGET_DIR)
+	rm -rf	$(dir GENERAL_OBJ_LIST) $(TARGET_DIR)
 
 .SECONDEXPANSION:
 
