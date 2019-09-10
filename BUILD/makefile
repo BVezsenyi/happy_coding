@@ -12,6 +12,8 @@ PRINTER = echo "$(CC) $@"
 
 .PHONY: clean update all
 
+$(MAKECMDGOALS): all
+
 
 all: clean update  
 
