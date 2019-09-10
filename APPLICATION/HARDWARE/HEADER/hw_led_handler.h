@@ -2,5 +2,6 @@
 #define _HW_LED_HANDLER_H_
 
 void hw_led_on( void );
+void hw_led_off( void );
 
 #endif /* _HW_LED_HANDLER_H_ */

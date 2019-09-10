@@ -7,6 +7,7 @@ int main( void )
   //If user interaction occures -> related function is called
 
   led_on_ifc();
-
+  led_off_ifc();
+  
   return 0;
 }

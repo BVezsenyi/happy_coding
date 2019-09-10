@@ -11,12 +11,14 @@ or simulator.
 
 typedef enum{
 
-    FN_LED_ON = 1,
+    FN_LED_ON = 0,
     FN_LED_OFF,
     FN_MAX_VALUE
 
 }FN_PTR_LIST;
 
 void led_on_ifc( void );
+void led_off_ifc( void );
+void ERROR_HANDLER( const char* fn_name , const char* error_msg );
 
 #endif /* _MAIN_IFC_H_ */
