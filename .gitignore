@@ -1,0 +1,6 @@
+.vscode/settings.json
+APPLICATION/HARDWARE/OBJ/hw_led_handler.o
+APPLICATION/INTERFACE/OBJ/main_ifc.o
+APPLICATION/LED_HANDLER/OBJ/led_handler.o
+APPLICATION/SIMULATOR/OBJ/sim_led_handler.o
+APPLICATION/TARGET/application.exe
