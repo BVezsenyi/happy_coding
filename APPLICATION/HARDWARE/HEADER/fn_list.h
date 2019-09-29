@@ -7,4 +7,4 @@ void (*fn_ptr_list[])( void ) = {   hw_led_on,
                                     hw_led_off
                                 };
 
-#endif /* #ifndef _FN_LIST_H_ */
+#endif /* _FN_LIST_H_ */

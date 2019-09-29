@@ -10,14 +10,9 @@ EXE_FILE = $(TARGET_DIR)$(EXE_NAME)
 DIR_GUARD=@mkdir -p $(@D)
 PRINTER = echo "$(CC) $@"
 
-.PHONY: clean update all
+.PHONY: clean update
 
-$(MAKECMDGOALS): all
-
-
-all: clean update  
-
-update: $(EXE_FILE)	 
+$(MAKECMDGOALS): clean $(EXE_FILE)
 
 clean: 
 	rm -rf	$(GENERAL_OBJ_LIST) $(TARGET_DIR)
