@@ -27,4 +27,4 @@ $(EXE_FILE): $(GENERAL_OBJ_LIST)
 $(GENERAL_OBJ_LIST): %.o: $$(subst $(OBJ_DIR),$(SRC_DIR),$$*).c
 	$(PRINTER)
 	$(DIR_GUARD)
-	$(CC) $(INCLUDE) -c $< -o $@
+	$(CC) $(INCLUDE)  $(C_FLAGS) -c $< -o $@
