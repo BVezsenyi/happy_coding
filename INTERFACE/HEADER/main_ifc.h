@@ -1,6 +1,8 @@
 #ifndef _MAIN_IFC_H_
 #define _MAIN_IFC_H_
 
+#include "connector.h"
+
 /*
 INTERFACE layer
 

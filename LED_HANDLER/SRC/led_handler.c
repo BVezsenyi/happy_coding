@@ -4,8 +4,7 @@
 int main( void )
 {
   //Inifinit loop:
-  //If user interaction occures -> related function is called
-
+  
   led_on_ifc();
   led_off_ifc();
   
