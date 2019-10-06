@@ -11,7 +11,8 @@ INCLUDE:= \
 C_FLAGS:=
 
 ifeq ($(MAKECMDGOALS),simulator)
-GENERAL_SRC_LIST+=./SIMULATOR/SRC/sim_led_handler.c
+GENERAL_SRC_LIST+= \
+./SIMULATOR/SRC/sim_led_handler.c
 INCLUDE+=-I./SIMULATOR/HEADER/
 endif
 
@@ -20,4 +21,4 @@ GENERAL_SRC_LIST+=./HARDWARE/SRC/hw_led_handler.c
 INCLUDE+=-I./HARDWARE/HEADER/
 endif
 
-include ../BUILD/makefile
+include ./BUILD/makefile

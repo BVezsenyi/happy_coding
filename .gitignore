@@ -4,3 +4,8 @@ APPLICATION/INTERFACE/OBJ/main_ifc.o
 APPLICATION/LED_HANDLER/OBJ/led_handler.o
 APPLICATION/SIMULATOR/OBJ/sim_led_handler.o
 APPLICATION/TARGET/application.exe
+HARDWARE/OBJ/hw_led_handler.o
+INTERFACE/OBJ/main_ifc.o
+LED_HANDLER/OBJ/led_handler.o
+SIMULATOR/OBJ/sim_led_handler.o
+TARGET/application.exe
