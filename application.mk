@@ -15,13 +15,6 @@ ifeq ($(MAKECMDGOALS),target)
 include ./HARDWARE/sources.mk
 endif
 
-ifeq ($(MAKECMDGOALS),clean)
-
-ADDITIONAL_CLEAN:= \
-./HARDWARE/OBJ/ \
-./SIMULATOR/OBJ/ \
-
-endif
-
+#test comment -> Test gitkraken workaround
 
 include ./BUILD/makefile
