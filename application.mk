@@ -21,4 +21,6 @@ GENERAL_SRC_LIST+=./HARDWARE/SRC/hw_led_handler.c
 INCLUDE+=-I./HARDWARE/HEADER/
 endif
 
+#test comment -> Test gitkraken workaround
+
 include ./BUILD/makefile
