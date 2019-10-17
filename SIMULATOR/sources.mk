@@ -1,0 +1,6 @@
+TARGET_NAME:=application.exe
+
+GENERAL_SRC_LIST+= \
+./SIMULATOR/SRC/sim_led_handler.c
+
+INCLUDE+=-I./SIMULATOR/HEADER/
