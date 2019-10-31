@@ -1,3 +1,5 @@
 language: c
+before_install:
+  - chmod +x BUILD/build_simulator.sh
 script: cd BUILD && ./build_simulator.sh
 compiler: gcc
