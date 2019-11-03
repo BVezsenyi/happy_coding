@@ -1,7 +1,8 @@
 #ifndef _LED_HANDLER_H_
 #define _LED_HANDLER_H_
 
-#include "main_ifc.h"
+#include "led_handler_ifc.h"
+#include "init_ifc.h"
 
 typedef enum led_state{
   TURN_ON = 0,

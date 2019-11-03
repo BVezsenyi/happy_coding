@@ -3,7 +3,7 @@ VALID_TARGET_LIST:= \
 target \
 simulator
 
-include ./LED_HANDLER/sources.mk
+include ./APPLICATION/sources.mk
 include ./INTERFACE/sources.mk
 
 
