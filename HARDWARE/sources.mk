@@ -2,7 +2,9 @@ CUSTOM_COMPILER:=arm-none-eabi-gcc
 
 TARGET_NAME:=application.elf
 
-GENERAL_SRC_LIST+=./HARDWARE/SRC/hw_led_handler.c
+GENERAL_SRC_LIST+=./HARDWARE/SRC/hw_main.c \
+./HARDWARE/SRC/hw_init.c \
+./HARDWARE/SRC/hw_led_handler.c
 
 INCLUDE+=-I./HARDWARE/HEADER/
 

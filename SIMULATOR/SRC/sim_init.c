@@ -4,4 +4,6 @@
 void sim_init( void )
 {
     printf("I'm %s\n", __func__  );
+    sim_led_init();
+
 }
