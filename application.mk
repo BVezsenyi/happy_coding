@@ -1,6 +1,7 @@
 
 VALID_TARGET_LIST:= \
-target \
+nucleo \
+tbird \
 simulator
 
 include ./APPLICATION/sources.mk
@@ -11,10 +12,18 @@ ifeq ($(MAKECMDGOALS),simulator)
 include ./SIMULATOR/sources.mk
 endif
 
-ifeq ($(MAKECMDGOALS),target)
-include ./HARDWARE/sources.mk
+ifeq ($(MAKECMDGOALS),nucleo)
+include ./HARDWARE/NUCLEO/sources.mk
 endif
 
-#test comment -> Test gitkraken workaround
+ifeq ($(MAKECMDGOALS),tbird)
+include ./HARDWARE/TBIRD/sources.mk
+endif
+
+ifeq ($(MAKECMDGOALS),clean)
+ADDITIONAL_CLEAN:=./HARDWARE/NUCLEO/OBJ \
+./HARDWARE/TBIRD/OBJ \
+./SIMULATOR/OBJ
+endif
 
 include ./BUILD/makefile

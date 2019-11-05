@@ -1,4 +1,4 @@
-TARGET_NAME:=application.exe
+TARGET_NAME:=simulator.exe
 
 GENERAL_SRC_LIST+= \
 ./SIMULATOR/SRC/sim_main.c \
