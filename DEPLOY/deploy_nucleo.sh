@@ -1,0 +1,1 @@
+#Flash TARGET/NUCLEO/nucleo.hex to NUCLEO F303
