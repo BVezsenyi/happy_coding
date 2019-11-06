@@ -2,44 +2,37 @@
 #include "main_ifc.h"
 
 static void* get_fn_ptr( FN_PTR_LIST );
-static void execute_function( FN_PTR_LIST );
 
-void led_on_ifc( void )
+void execute_function( FN_PTR_LIST fn_id )
 {
-    execute_function( FN_LED_ON );
-}
- 
-void led_off_ifc()
-{
-    execute_function( FN_LED_OFF );
+    void (*fn_ptr)( void );
+
+    fn_ptr = get_fn_ptr( fn_id );
+
+    if( NULL == fn_ptr )
+    {
+        ERROR_HANDLER( __func__ , "NULL pointer!" );
+    }
+    else
+    {
+        (*fn_ptr)();
+    }
 }
 
 static void* get_fn_ptr( FN_PTR_LIST fn_id )
 {
     void* fn_ptr_ret_val = NULL;
 
-    if( ( FN_LED_ON > fn_id ) || ( FN_MAX_VALUE <= fn_id ) ){
+    if( ( FN_INIT > fn_id ) || ( FN_MAX_VALUE <= fn_id ) )
+    {
         ERROR_HANDLER( __func__ , "Invalid function id!" );
-    }else{
+    }
+    else
+    {
         fn_ptr_ret_val = get_fn_ptr_list( fn_id );
     }
 
     return fn_ptr_ret_val;
-}
-
-static void execute_function( FN_PTR_LIST fn_id )
-{
-    void (*fn_ptr)( void );
-
-    fn_ptr = get_fn_ptr( fn_id );
-
-    if( NULL == fn_ptr ){
-
-        ERROR_HANDLER( __func__ , "NULL pointer!" );
-
-    }else{
-        (*fn_ptr)();
-    }
 }
 
 //TODO: move to separated error handler library

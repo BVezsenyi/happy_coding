@@ -5,11 +5,9 @@ TARGET_DIR=./TARGET/
 
 #Check if goal is valid: 
 
-ifneq (,$(CUSTOM_COMPILER))
-CC:=$(CUSTOM_COMPILER)
-else
-CC:=gcc
-endif
+CC:=$(COMPILER_PREFIX)gcc
+CP:=$(COMPILER_PREFIX)objcopy
+SZ:=$(COMPILER_PREFIX)size
 
 GENERAL_OBJ_LIST = $(foreach var, $(GENERAL_SRC_LIST), $(subst $(SRC_DIR),$(OBJ_DIR),$(var:.c=.o) ) ) 
 EXE_FILE = $(TARGET_DIR)$(TARGET_NAME)
@@ -19,7 +17,7 @@ PRINTER = echo "$(CC) $@"
 
 .SILENT:
 
-.PHONY: clean update
+.PHONY: clean
 
 clean: 
 	rm -rf	$(dir $(GENERAL_OBJ_LIST)) $(TARGET_DIR) $(ADDITIONAL_CLEAN)
@@ -34,6 +32,7 @@ $(GENERAL_OBJ_LIST): %.o: $$(subst $(OBJ_DIR),$(SRC_DIR),$$*).c
 $(EXE_FILE): $(GENERAL_OBJ_LIST)
 	$(PRINTER)
 	$(DIR_GUARD)
-	$(CC) $(C_FLAGS) $^ -o $@
+	$(CC) $(C_FLAGS) $(LD_SCRIPT) $(LD_FLAGS) $^ -o $@
+	$(SZ) $@
 
-$(VALID_TARGET_LIST): $(EXE_FILE)
+$(VALID_TARGET_LIST): $(EXE_FILE) $(ADDITIONAL_TARGETS)

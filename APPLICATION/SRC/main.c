@@ -1,10 +1,9 @@
-#include <stdio.h>
-#include "led_handler.h"
+#include "main.h"
 
 int main( void )
 {
-  //Inifinit loop:
-  
+  init_ifc();
+
   led_on_ifc();
   led_off_ifc();
   
