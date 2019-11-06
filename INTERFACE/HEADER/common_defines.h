@@ -3,7 +3,7 @@
 
 typedef enum{
 
-    INIT_FN = 0,
+    FN_INIT = 0,
     FN_LED_ON,
     FN_LED_OFF,
     FN_MAX_VALUE

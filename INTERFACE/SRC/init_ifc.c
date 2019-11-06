@@ -2,7 +2,7 @@
 
 void init_ifc( void )
 {
-    execute_function( INIT_FN );
+    execute_function( FN_INIT );
 }
 
 

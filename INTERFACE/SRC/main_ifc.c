@@ -23,7 +23,7 @@ static void* get_fn_ptr( FN_PTR_LIST fn_id )
 {
     void* fn_ptr_ret_val = NULL;
 
-    if( ( INIT_FN > fn_id ) || ( FN_MAX_VALUE <= fn_id ) )
+    if( ( FN_INIT > fn_id ) || ( FN_MAX_VALUE <= fn_id ) )
     {
         ERROR_HANDLER( __func__ , "Invalid function id!" );
     }
