@@ -1,9 +1,6 @@
 #!/bin/bash
 
-#Check if 'docker_avr_toolchain' image is exist:
-    #Build if not
+ #check if avr_gcc_img docker image is exist
+    #if does not -> build docker image: docker build avr_gcc_img -f ../DOCKER/AVR/Dockerfile
 
-#docker run -ti --rm -v "$(pwd)/../":/work/Dev docker_avr_toolchain /bin/bash -c "cd Dev; make -f application.mk tbird"
-
-
-docker run -ti --rm -v "$(pwd)/../":/work/Dev my_docker_img /bin/bash -c "cd Dev; make -f application.mk tbird"
+docker run -ti --rm -v "$(pwd)/../":/work/Dev avr_gcc_img  /bin/bash -c "cd Dev; make -f application.mk tbird"
