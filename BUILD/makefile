@@ -5,7 +5,6 @@ TARGET_DIR=./TARGET/
 
 #Check if goal is valid: 
 
-#Set compiler
 CC:=$(COMPILER_PREFIX)gcc
 CP:=$(COMPILER_PREFIX)objcopy
 SZ:=$(COMPILER_PREFIX)size
@@ -18,7 +17,7 @@ PRINTER = echo "$(CC) $@"
 
 .SILENT:
 
-.PHONY: clean 
+.PHONY: clean
 
 clean: 
 	rm -rf	$(dir $(GENERAL_OBJ_LIST)) $(TARGET_DIR) $(ADDITIONAL_CLEAN)
@@ -36,4 +35,4 @@ $(EXE_FILE): $(GENERAL_OBJ_LIST)
 	$(CC) $(C_FLAGS) $(LD_SCRIPT) $(LD_FLAGS) $^ -o $@
 	$(SZ) $@
 
-$(VALID_TARGET_LIST): $(EXE_FILE)
+$(VALID_TARGET_LIST): $(EXE_FILE) $(ADDITIONAL_TARGETS)
