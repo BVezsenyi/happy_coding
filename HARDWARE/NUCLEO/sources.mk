@@ -8,7 +8,7 @@ STARTUP:=startup_stm32f303xe.s
 
 GENERAL_SRC_LIST+= \
 $(STARTUP) \
-$(CURR_DIR)SRC/hw_main.c \
+$(CURR_DIR)SRC/hw_api.c \
 $(CURR_DIR)SRC/hw_init.c \
 $(CURR_DIR)SRC/hw_led_handler.c 
 

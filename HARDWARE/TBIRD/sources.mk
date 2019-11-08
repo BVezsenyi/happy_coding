@@ -4,7 +4,7 @@ TARGET_NAME:=tbird.elf
 
 CURR_DIR:=./HARDWARE/TBIRD/
 
-GENERAL_SRC_LIST+=$(CURR_DIR)SRC/hw_main.c \
+GENERAL_SRC_LIST+=$(CURR_DIR)SRC/hw_api.c \
 $(CURR_DIR)SRC/hw_init.c \
 $(CURR_DIR)SRC/hw_led_handler.c
 
