@@ -10,7 +10,7 @@ void hw_led_init( void )
 //TODO: void hw_led_on( LED_ID )
 void hw_led_on( void )
 {
-    PORTB = 0x10;
+    PORTB = 0xF0;
 }
 
 //TODO: void hw_led_off( LED_ID )
