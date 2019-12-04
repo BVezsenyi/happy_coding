@@ -1,7 +1,5 @@
 OBJ_DIR=OBJ
 SRC_DIR=SRC
-TARGET_DIR=./TARGET/
-
 
 #Check if goal is valid: 
 
@@ -10,14 +8,17 @@ CP:=$(COMPILER_PREFIX)objcopy
 SZ:=$(COMPILER_PREFIX)size
 
 GENERAL_OBJ_LIST = $(foreach var, $(GENERAL_SRC_LIST), $(subst $(SRC_DIR),$(OBJ_DIR),$(var:.c=.o) ) ) 
-EXE_FILE = $(TARGET_DIR)$(TARGET_NAME)
+
+ifeq ($(EXE_FILE),)
+EXE_FILE=default.exe
+endif
 
 DIR_GUARD=@mkdir -p $(@D)
 PRINTER = echo "$(CC) $@"
 
-.SILENT:
+#.SILENT:
 
-.PHONY: clean
+.PHONY: clean $(VALID_TARGET_LIST)
 
 clean: 
 	rm -rf	$(dir $(GENERAL_OBJ_LIST)) $(TARGET_DIR) $(ADDITIONAL_CLEAN)
@@ -35,4 +36,7 @@ $(EXE_FILE): $(GENERAL_OBJ_LIST)
 	$(CC) $(C_FLAGS) $(LD_SCRIPT) $(LD_FLAGS) $^ -o $@
 	$(SZ) $@
 
-$(VALID_TARGET_LIST): $(EXE_FILE) $(ADDITIONAL_TARGETS)
+$(HEX_FILE): $(EXE_FILE)
+	$(CP) $(CP_FLAGS) -O $(CP_FORMAT) $< $@
+
+$(VALID_TARGET_LIST): $(EXE_FILE) $(HEX_FILE)

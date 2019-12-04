@@ -1,6 +1,9 @@
 COMPILER_PREFIX:=arm-none-eabi-
 
-TARGET_NAME:=nucleo.elf
+TARGET_DIR=./TARGET/
+TARGET_NAME:=nucleo
+HEX_FILE:= $(TARGET_DIR)$(TARGET_NAME).hex
+EXE_FILE = $(TARGET_DIR)$(TARGET_NAME).elf
 
 CURR_DIR:=./HARDWARE/NUCLEO/
 
@@ -8,7 +11,7 @@ STARTUP:=startup_stm32f303xe.s
 
 GENERAL_SRC_LIST+= \
 $(STARTUP) \
-$(CURR_DIR)SRC/hw_main.c \
+$(CURR_DIR)SRC/hw_api.c \
 $(CURR_DIR)SRC/hw_init.c \
 $(CURR_DIR)SRC/hw_led_handler.c 
 

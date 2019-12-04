@@ -9,3 +9,6 @@ INTERFACE/OBJ/
 SIMULATOR/OBJ/
 *.vscode
 HARDWARE/NUCLEO/makefile_from_cubemx
+*.exe
+*.hex
+*.elf

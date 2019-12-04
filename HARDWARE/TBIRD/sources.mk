@@ -1,10 +1,13 @@
 COMPILER_PREFIX:=avr-
 
-TARGET_NAME:=tbird.elf
+TARGET_DIR=./TARGET/
+TARGET_NAME:=tbird
+HEX_FILE:= $(TARGET_DIR)$(TARGET_NAME).hex
+EXE_FILE = $(TARGET_DIR)$(TARGET_NAME).elf
 
 CURR_DIR:=./HARDWARE/TBIRD/
 
-GENERAL_SRC_LIST+=$(CURR_DIR)SRC/hw_main.c \
+GENERAL_SRC_LIST+=$(CURR_DIR)SRC/hw_api.c \
 $(CURR_DIR)SRC/hw_init.c \
 $(CURR_DIR)SRC/hw_led_handler.c
 
@@ -17,3 +20,11 @@ C_FLAGS+= \
 -Wall \
 -mmcu=atmega128 \
 -DF_CPU=16000000
+
+CP_FLAGS:= \
+-j .text \
+-j .data
+
+CP_FORMAT:= \
+ihex
+

@@ -1,21 +1,17 @@
-FROM ubuntu:16.04
+FROM debian:latest
 
-MAINTAINER Balint Vezsenyi
+LABEL maintainer="Balint Vezsenyi"
+LABEL Description="Image for build AVR projects"
 
-LABEL Description="Image for building Atmel AVR GNU toolchain for Linux"
+WORKDIR /work
 
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y \
-        git \
-        wget \
-        autoconf2.64 \
-        build-essential \
+    build-essential \
 	gcc-avr \
 	avr-libc \
 	avrdude \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-WORKDIR /work
 
-ADD . /work

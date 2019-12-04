@@ -1,1 +1,2 @@
-docker run -ti --rm -v "$(pwd)/../":/work/Dev stronglytyped/arm-none-eabi-gcc /bin/bash -c "cd Dev; make -f application.mk clean"
+#Since clean does not do anything else, only removes some files, docker is not needed. 
+#If cleaning is required, run make -f application.mk clean from terminal

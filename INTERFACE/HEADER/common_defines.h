@@ -1,6 +1,10 @@
 #ifndef _COMMON_DEFINES_
 #define _COMMON_DEFINES_
 
+#define INVALID_FN_PTR  NULL
+#define TRUE    1
+#define FALSE   0
+
 typedef enum{
 
     FN_INIT = 0,
@@ -8,7 +12,6 @@ typedef enum{
     FN_LED_OFF,
     FN_MAX_VALUE
 
-}FN_PTR_LIST;
-
+}FN_ID_LIST;
 
 #endif /* _COMMON_DEFINES_  */ 
