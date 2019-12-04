@@ -6,13 +6,13 @@ void sim_led_init( void )
     printf("I'm %s\n", __func__  );
 }
 
-void sim_led_on( void )
+void sim_led_on( char led_id )
 {
-    printf("I'm %s\n", __func__  );
+    printf("I'm %s\nMy Argument is: %d\n", __func__ , led_id );
 }
 
-void sim_led_off( void )
+void sim_led_off( char led_id )
 {
-    printf("I'm %s\n", __func__  );
+    printf("I'm %s\nMy Argument is: %d\n", __func__ , led_id );
 }
 
