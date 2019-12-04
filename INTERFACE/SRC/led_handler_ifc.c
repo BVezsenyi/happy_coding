@@ -2,12 +2,12 @@
 
 void led_on_ifc( void )
 {
-    execute_function( FN_LED_ON );
+    function_execution_request( FN_LED_ON );
 }
  
 void led_off_ifc( void )
 {
-    execute_function( FN_LED_OFF );
+    function_execution_request( FN_LED_OFF );
 }
 
 

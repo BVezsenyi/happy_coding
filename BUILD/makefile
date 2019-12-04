@@ -18,7 +18,7 @@ PRINTER = echo "$(CC) $@"
 
 #.SILENT:
 
-.PHONY: clean
+.PHONY: clean $(VALID_TARGET_LIST)
 
 clean: 
 	rm -rf	$(dir $(GENERAL_OBJ_LIST)) $(TARGET_DIR) $(ADDITIONAL_CLEAN)
