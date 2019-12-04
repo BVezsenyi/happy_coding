@@ -23,7 +23,8 @@ endif
 ifeq ($(MAKECMDGOALS),clean)
 ADDITIONAL_CLEAN:=./HARDWARE/NUCLEO/OBJ \
 ./HARDWARE/TBIRD/OBJ \
-./SIMULATOR/OBJ
+./SIMULATOR/OBJ \
+./TARGET
 endif
 
 include ./BUILD/makefile
