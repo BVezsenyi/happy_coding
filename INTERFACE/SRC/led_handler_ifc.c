@@ -9,15 +9,19 @@ void led_on_ifc( LED_ID_ENUM led_id )
     check_led_id_validity( led_id );    
 
     fn_ptr = get_function_pointer_by_id( FN_LED_ON );
-
+    
     (*fn_ptr)( led_id );
-
-    //function_execution_request( FN_LED_ON );
 }
  
-void led_off_ifc( void )
+void led_off_ifc( LED_ID_ENUM led_id )
 {
-    function_execution_request( FN_LED_OFF );
+    void (*fn_ptr)( LED_ID_ENUM );
+
+    check_led_id_validity( led_id ); 
+    
+    fn_ptr = get_function_pointer_by_id( FN_LED_OFF );
+    
+    (*fn_ptr)( led_id );
 }
 
 static void check_led_id_validity( LED_ID_ENUM led_id )

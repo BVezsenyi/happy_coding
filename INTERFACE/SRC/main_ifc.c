@@ -2,7 +2,6 @@
 #include "main_ifc.h"
 
 static void  check_fn_id_validity( FN_ID_LIST );
-static void  execute_function( FN_ID_LIST );
 
 void* get_function_pointer_by_id( FN_ID_LIST fn_id )
 {

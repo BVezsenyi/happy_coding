@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include "api.h"
 
-void (*fn_ptr_list[])( void ) = {   sim_init,
-                                    sim_led_on, 
-                                    sim_led_off
-                                };
+void *fn_ptr_list[] =   { 
+                            sim_init,
+                            sim_led_on, 
+                            sim_led_off
+                        };
 
 
 void *get_fn_ptr_list( int array_element )
