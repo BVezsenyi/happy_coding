@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "sim_api.h"
+#include "api.h"
 
 void (*fn_ptr_list[])( void ) = {   sim_init,
                                     sim_led_on, 
