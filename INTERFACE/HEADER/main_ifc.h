@@ -3,8 +3,8 @@
 
 #include "common_defines.h"
 #include "api.h"
-#include "error_handler_ifc.h"
+#include "error_handler.h"
 
-void* get_function_pointer_by_id( FUNCTION_ID_LIST );
+void* get_function_pointer_by_id( FUNCTION_ID );
 
 #endif /* _MAIN_IFC_H_ */
