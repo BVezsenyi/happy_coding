@@ -2,7 +2,11 @@
 
 void init_ifc( void )
 {
-    function_execution_request( FN_INIT );
+    void (*fn_ptr)( );
+    
+    fn_ptr = get_function_pointer_by_id( FN_INIT );
+    
+    (*fn_ptr)( );
 }
 
 

@@ -4,6 +4,6 @@
 #include "hw_init.h"
 #include "hw_led_handler.h"
 
-void *get_fn_ptr_list( int );
+void *get_function_pointer_from_list( int );
 
 #endif /* _API_ */
