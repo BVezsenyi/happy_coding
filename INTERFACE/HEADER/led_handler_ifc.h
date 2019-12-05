@@ -8,7 +8,7 @@ TODO: Move this typedef to hardware/simualtor layer.
 The lowest ( hardware/simulator ) layer shall give the avialable LED list
 */
 
-typedef enum led_id_enum{
+typedef enum {
 
     LED_0 = 0,
     LED_1,

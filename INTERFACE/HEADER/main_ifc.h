@@ -5,6 +5,6 @@
 #include "api.h"
 #include "error_handler_ifc.h"
 
-void* get_function_pointer_by_id( FN_ID_LIST );
+void* get_function_pointer_by_id( FUNCTION_ID_LIST );
 
 #endif /* _MAIN_IFC_H_ */

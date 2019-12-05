@@ -12,6 +12,6 @@ typedef enum{
     FN_LED_OFF,
     FN_MAX_VALUE
 
-}FN_ID_LIST;
+}FUNCTION_ID_LIST;
 
 #endif /* _COMMON_DEFINES_  */ 
