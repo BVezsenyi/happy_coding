@@ -1,14 +1,11 @@
 .vscode/settings.json
 TARGET/
-APPLICATION/OBJ/
-HARDWARE/NUCLEO/OBJ/
 HARDWARE/NUCLEO/SRC/from_cubemx
 HARDWARE/NUCLEO/HEADER/from_cubemx
-HARDWARE/TBIRD/OBJ/
-INTERFACE/OBJ/
-SIMULATOR/OBJ/
-*.vscode
 HARDWARE/NUCLEO/makefile_from_cubemx
+*.vscode
 *.exe
 *.hex
 *.elf
+*/LIB/
+*/OBJ/

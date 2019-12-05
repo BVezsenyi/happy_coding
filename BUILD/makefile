@@ -3,11 +3,12 @@ SRC_DIR=SRC
 
 #Check if goal is valid: 
 
+AR:=$(COMPILER_PREFIX)ar
 CC:=$(COMPILER_PREFIX)gcc
 CP:=$(COMPILER_PREFIX)objcopy
 SZ:=$(COMPILER_PREFIX)size
 
-GENERAL_OBJ_LIST = $(foreach var, $(GENERAL_SRC_LIST), $(subst $(SRC_DIR),$(OBJ_DIR),$(var:.c=.o) ) ) 
+GENERAL_OBJ_LIST = $(foreach var, $(GENERAL_SRC_LIST), $(subst $(SRC_DIR),$(OBJ_DIR),$(var:.c=.o) ) )
 
 ifeq ($(EXE_FILE),)
 EXE_FILE=default.exe
@@ -21,7 +22,7 @@ PRINTER = echo "$(CC) $@"
 .PHONY: clean $(VALID_TARGET_LIST)
 
 clean: 
-	rm -rf	$(dir $(GENERAL_OBJ_LIST)) $(TARGET_DIR) $(ADDITIONAL_CLEAN)
+	rm -rf $(dir $(GENERAL_OBJ_LIST)) $(ADDITIONAL_CLEAN)
 
 .SECONDEXPANSION:
 

@@ -7,14 +7,12 @@ void hw_led_init( void )
     DDRD=0xF0;
 }
 
-//TODO: void hw_led_on( LED_ID )
-void hw_led_on( void )
+void hw_led_on( LED_ID led_id )
 {
     PORTD = 0xF0;
 }
 
-//TODO: void hw_led_off( LED_ID )
-void hw_led_off( void )
+void hw_led_off( LED_ID led_id )
 {
     PORTD = 0x00;
 }

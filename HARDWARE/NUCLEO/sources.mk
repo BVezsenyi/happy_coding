@@ -1,5 +1,3 @@
-COMPILER_PREFIX:=arm-none-eabi-
-
 TARGET_DIR=./TARGET/
 TARGET_NAME:=nucleo
 HEX_FILE:= $(TARGET_DIR)$(TARGET_NAME).hex
