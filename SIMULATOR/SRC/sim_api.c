@@ -8,7 +8,7 @@ void *fn_ptr_list[] =   {
                         };
 
 
-void *get_fn_ptr_list( int array_element )
+void *get_function_pointer_from_list( int array_element )
 {
     return fn_ptr_list[ array_element ];
 }

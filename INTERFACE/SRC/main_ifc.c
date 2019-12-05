@@ -9,7 +9,7 @@ void* get_function_pointer_by_id( FN_ID_LIST fn_id )
     
     check_fn_id_validity( fn_id );
 
-    fn_ptr_ret_val = get_fn_ptr_list( fn_id );
+    fn_ptr_ret_val = get_function_pointer_from_list( fn_id );
     
     if( INVALID_FN_PTR == fn_ptr_ret_val )
     {
