@@ -1,7 +1,10 @@
-GENERAL_SRC_LIST+=./INTERFACE/SRC/main_ifc.c \
-./INTERFACE/SRC/init_ifc.c \
-./INTERFACE/SRC/led_handler_ifc.c \
-./INTERFACE/SRC/error_handler_ifc.c \
+CURR_DIR := ./INTERFACE/
+
+GENERAL_SRC_LIST := $(GENERAL_SRC_LIST) \
+$(CURR_DIR)SRC/main_ifc.c \
+$(CURR_DIR)SRC/init_ifc.c \
+$(CURR_DIR)SRC/led_handler_ifc.c \
 
 
-INCLUDE+=-I./INTERFACE/HEADER/
+INCLUDE := $(INCLUDE) \
+-I$(CURR_DIR)HEADER/
