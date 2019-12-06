@@ -19,7 +19,7 @@ void led_off_ifc( LED_ID led_id )
 
     check_led_id_validity( led_id ); 
     
-    fn_ptr = get_function_pointer_by_id( FN_LED_OFF + 10 );
+    fn_ptr = get_function_pointer_by_id( FN_LED_OFF );
     
     (*fn_ptr)( led_id );
 }
