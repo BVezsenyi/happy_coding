@@ -1,5 +1,5 @@
 language: c
 before_install:
-  - chmod +x BUILD/build_simulator_and_clean.sh
-script: cd BUILD && ./build_simulator_and_clean.sh
+  - chmod +x BUILD/build_nucleo.sh
+script: cd BUILD && ./build_nucleo.sh
 compiler: gcc
