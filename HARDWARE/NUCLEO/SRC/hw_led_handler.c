@@ -1,21 +1,15 @@
 #include <stdio.h>
 #include "hw_led_handler.h"
 
-
 void hw_led_init( void )
 {
-    printf("I'm %s\n", __func__  );
 }
 
-//TODO: void hw_led_on( LED_ID )
-void hw_led_on( void )
+void hw_led_on( LED_ID led_id )
 {
-    printf("I'm %s\n", __func__  );
 }
 
-//TODO: void hw_led_off( LED_ID )
-void hw_led_off( void )
+void hw_led_off( LED_ID led_id )
 {
-    printf("I'm %s\n", __func__  );
 }
 
