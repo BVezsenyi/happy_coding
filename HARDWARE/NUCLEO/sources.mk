@@ -11,9 +11,8 @@ GENERAL_ASM_LIST:= \
 $(CURR_DIR)SRC/$(STARTUP) \
 
 SRC_LIST = \
-hw_api.c \
-hw_init.c \
-hw_led_handler.c \
+init.c \
+led_handler.c \
 system_stm32f3xx.c \
 stm32f3xx_hal_gpio.c \
 stm32f3xx_hal_rcc.c \

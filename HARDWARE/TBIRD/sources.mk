@@ -6,9 +6,8 @@ HEX_FILE:= $(TARGET_DIR)$(TARGET_NAME).hex
 EXE_FILE = $(TARGET_DIR)$(TARGET_NAME).elf
 
 SRC_LIST = \
-hw_api.c \
-hw_init.c \
-hw_led_handler.c
+init.c \
+led_handler.c
 
 GENERAL_SRC_LIST := $(GENERAL_SRC_LIST) \
 $(addprefix $(CURR_DIR)SRC/,$(SRC_LIST))

@@ -2,7 +2,6 @@
 #define _MAIN_H_
 
 #include "common_defines.h"
-#include "led_handler_ifc.h"
-#include "init_ifc.h"
+#include "target_api.h"
 
 #endif /* _MAIN_H_ */
