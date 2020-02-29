@@ -5,7 +5,3 @@ main.c
 
 GENERAL_SRC_LIST := $(GENERAL_SRC_LIST) \
 $(addprefix $(CURR_DIR)SRC/,$(SRC_LIST))
-
-
-INCLUDE := $(INCLUDE) \
--I$(CURR_DIR)HEADER/

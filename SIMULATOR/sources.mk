@@ -5,9 +5,8 @@ TARGET_NAME:=simulator
 EXE_FILE = $(TARGET_DIR)$(TARGET_NAME).elf
 
 SRC_LIST = \
-sim_api.c \
-sim_init.c \
-sim_led_handler.c \
+init.c \
+led_handler.c \
 
 GENERAL_SRC_LIST := $(GENERAL_SRC_LIST) \
 $(addprefix $(CURR_DIR)SRC/,$(SRC_LIST))

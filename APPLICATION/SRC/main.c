@@ -1,4 +1,6 @@
-#include "main.h"
+
+#include "common_defines.h"
+#include "target_api.h"
 
 int main( void )
 {

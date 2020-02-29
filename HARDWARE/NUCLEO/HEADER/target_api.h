@@ -1,7 +1,7 @@
-#ifndef _API_
-#define _API__
+#ifndef _TARGET_API_
+#define _TARGET_API_
 
 #include "init.h"
 #include "led_handler.h"
 
-#endif /* _API_ */
+#endif /* _TARGET_API_ */
