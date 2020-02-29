@@ -1,7 +1,11 @@
 CURR_DIR := ./APPLICATION/
 
+SRC_LIST = \
+main.c
+
 GENERAL_SRC_LIST := $(GENERAL_SRC_LIST) \
-$(CURR_DIR)SRC/main.c
+$(addprefix $(CURR_DIR)SRC/,$(SRC_LIST))
+
 
 INCLUDE := $(INCLUDE) \
 -I$(CURR_DIR)HEADER/
