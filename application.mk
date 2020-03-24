@@ -1,6 +1,7 @@
 
 VALID_TARGET_LIST:= \
 nucleo \
+nucleo_f0308r \
 tbird \
 simulator
 
@@ -17,6 +18,11 @@ COMPILER_PREFIX:=arm-none-eabi-
 include ./HARDWARE/NUCLEO/sources.mk
 endif
 
+ifeq ($(MAKECMDGOALS),nucleo_f0308r)
+COMPILER_PREFIX:=arm-none-eabi-
+include ./HARDWARE/NUCLEO_F0308R/sources.mk
+endif
+
 ifeq ($(MAKECMDGOALS),tbird)
 COMPILER_PREFIX:=avr-
 include ./HARDWARE/TBIRD/sources.mk
@@ -26,6 +32,7 @@ ifeq ($(MAKECMDGOALS),clean)
 COMPILER_PREFIX:=
 ADDITIONAL_CLEAN:= \
 ./HARDWARE/NUCLEO/OBJ \
+./HARDWARE/NUCLEO_F0308/OBJ \
 ./HARDWARE/TBIRD/OBJ \
 ./SIMULATOR/OBJ \
 ./ERROR_HANDLER/LIB/ \
