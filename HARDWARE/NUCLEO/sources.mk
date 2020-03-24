@@ -13,6 +13,7 @@ $(CURR_DIR)SRC/$(STARTUP) \
 SRC_LIST = \
 init.c \
 led_handler.c \
+time_handler.c \
 system_stm32f3xx.c \
 stm32f3xx_hal_gpio.c \
 stm32f3xx_hal_rcc.c \
@@ -20,7 +21,8 @@ stm32f3xx_hal_rcc_ex.c \
 stm32f3xx_hal.c \
 stm32f3xx_hal_cortex.c \
 stm32f3xx_hal_flash.c \
-stm32f3xx_hal_flash_ex.c
+stm32f3xx_hal_flash_ex.c \
+stm32f3xx_it.c \
 
 GENERAL_SRC_LIST := $(GENERAL_SRC_LIST) \
 $(addprefix $(CURR_DIR)SRC/,$(SRC_LIST))
